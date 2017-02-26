@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ActividadDiscos.ViewModels.ClientesViewModel>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="lead">Listado de clientes:</h3>
+
+<p>
+    @Html.ActionLink("CreateNew", "Create")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td><strong>Número</strong></td>
+            <td><strong>@Html.DisplayNameFor(model => model.Nombre)</strong></td>
+            <td><strong>@Html.DisplayNameFor(model => model.Email)</strong></td>
+            <td><strong>@Html.DisplayNameFor(model => model.FechaNacimiento)</strong></td>
+            <td><strong>@Html.DisplayNameFor(model => model.FechaRegistro)</strong></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nombre</td>
+                <td>@item.Email</td>
+                <td>@item.FechaNacimiento</td>
+                <td>@item.FechaRegistro</td>
+                <td>
+                    @Html.ActionLink("Edit", "Clientes", new { item.Id }) |
+                    @Html.ActionLink("Details", "Clientes", new { item.Id }) |
+                    @Html.ActionLink("Delete", "Clientes", new { item.Id }) |
+                    @Html.ActionLink("Puntuaciones", "GetPuntuaciones", new { item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

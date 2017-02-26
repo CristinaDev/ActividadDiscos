@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Discos";
+}
+
+<div class="jumbotron" style="background-image: url('@Url.Content("~/Content/images/fiesta_discopeque.jpg")')">
+    <h1>ASP.NET</h1>
+    <p class="lead">Cristina Peón Padilla</p>
+    <p>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-primary btn-lg">Admin</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Discos</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Discos")">
+                <img src="~/Content/images/multimedia.png" alt="Discos" width="128" height="128" />
+                Ir a discos&raquo;
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Intérpretes</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Interpretes")">
+                <img src="~/Content/images/music.png" alt="Intérpretes" width="128" height="128" />
+                Ir a intérpretes&raquo;
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Login</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Auth")">
+                <img src="~/Content/images/login.png" alt="Login" width="128" height="128" />
+                Ir a identificación&raquo;
+            </a>
+        </p>
+        <p>
+            <a class="btn btn-primary" href="@Url.Action("Register", "Auth")">Registro</a>
+        </p>
+    </div>
+</div>

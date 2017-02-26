@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Panel de administración";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="lead">Panel de administración:</h3>
+<p>
+    <ul>
+        <li>@Html.ActionLink("Ir a clientes", "Index", "Clientes")</li>
+        <li>@Html.ActionLink("Nuevo cliente", "CreateCustomer")</li>
+    </ul>
+</p>

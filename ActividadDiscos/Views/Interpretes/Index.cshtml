@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ActividadDiscos.ViewModels.InterpretesViewModel>
+
+@{
+    ViewBag.Title = "Intérpretes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="lead">Listado de Intérpretes:</h3>
+
+<div class="col-md-12">
+    <table class="table">
+        <thead>
+            <tr>
+                <td><strong>Número</strong></td>
+                <td><strong>Intérprete</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdInterprete</td>
+                    <td>@item.Interprete1</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
